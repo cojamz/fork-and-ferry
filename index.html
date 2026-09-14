@@ -108,6 +108,8 @@ img{max-width:100%;display:block}
   font-family:Cinzel,Georgia,serif;font-size:18px;line-height:1.5;color:var(--ink);letter-spacing:.02em}
 .speech{margin:30px 0;padding:4px 0 4px 24px;border-left:2px solid #5d666a;color:var(--ink)}
 .speech p+p,.speech .items,.speech .items+p{margin-top:16px}
+.prose h3+.speech{margin-top:0}
+.prose .speech+p{margin-top:24px}
 .speech .items p+p{margin-top:10px}
 
 /* tabs */
@@ -328,30 +330,56 @@ figcaption{margin-top:12px;color:var(--dim);font-size:15px}
 </section>
 
 <section class="panel wrap" id="p-job" role="tabpanel" aria-labelledby="t-job" hidden>
-  <div class="narrow prose">
-    <p class="listing">&ldquo;Wanted: lost item. <span class="gold">2000g</span> each for retrieval. <span class="gold">500g</span> each up front. Zook&rsquo;s at the quarter moon. Ask for nothing.&rdquo;</p>
-    <p>The job listing, however you found it or it made its way to you, has a sort of magical quality about it.</p>
-    <p>You head to Zook&rsquo;s on the night of the quarter moon. It&rsquo;s a shop known for its wide selection of gear for adventurers but also for its absurd prices. You ask Zook, the gnomish shopkeeper, for nothing. He sizes you up, then silently hops down from his stool and reveals a secret panel behind a pile of rope. He opens it to a small staircase, and gestures you in. You make your way down an ever-descending staircase to a clammy, quiet meeting room lit by dimly burning sconces. It&rsquo;s got a medium, wooden circular table in the middle surrounded by 7 chairs. On the edges of the room are a few chests of varying age. Some seem newer, and some are rotted through.</p>
-    <p>You may be the first one, or some of the other adventurers may be there already. You might even make small talk. Maybe you know a few of them. Maybe some of you came together.</p>
-    <p>In any event, when there&rsquo;s a quorum, a figure appears suddenly in the room. You&rsquo;re not sure if it came quietly from the stairs or was spirited there by magic. Perhaps it was waiting there invisibly.</p>
-    <p>You can see none of the figure&rsquo;s body or features. It wears long, oversized brown robes. Its face is shrouded by a combination of shadow and a kaleidoscopic, illusory magic. Its hands are sheathed in worn, gray leather gloves. It regards you all. Its voice is ethereal, androgynous, and without echo.</p>
-    <div class="speech">
-      <p>&ldquo;Hail, adventurers. Welcome. Heed me, as I will say only what needs saying and I will say it only once.</p>
-      <p>You have come here because you found my job posting. I know you are strong and capable, as the postings were enchanted to only reveal themselves to such creatures.</p>
-      <p>The task I have for you is simple: Retrieve a <span class="staff">Staff</span>. I have learned that the <span class="staff">Staff</span> will likely be at the Fork and Ferry two nights from now. I will give you <span class="gold">500g</span> up front, which you can use to outfit yourselves at the shop overhead, or to whatever end you desire. I have seen to it that Zook will offer you fair prices.</p>
-      <p>Unfortunately I cannot offer you much information beyond that. I do not know who will have the <span class="staff">Staff</span>, when they might arrive, or when they might leave. I only know that it will almost certainly be at the Fork and Ferry, two nights from now.</p>
-      <p>A few things you should know:</p>
-      <div class="items"><p>1) The <span class="staff">Staff</span> itself is plain, like that of a shepherd. Wooden, with a wide round hook at the head. It may be adorned, so as to disguise it.</p><p>2) You will know the <span class="staff">Staff</span> once you find it. Its aura is unique - if you hold it and know how to probe it arcanely, you will sense it clearly.</p><p>3) I suspect the presence of the <span class="staff">Staff</span> will not be made obvious. It will require some cunning to suss it out.</p><p>4) It&rsquo;s likely that you will not be the only ones looking for it. Be wary of others looking as well - they may even be in groups, like you. They will not make their purpose obvious, and neither should you.</p><p>5) You likely know that the Fork and Ferry is remote. It&rsquo;s a favored place of resting and recreation for all manner of adventurers. Do not underestimate those you meet.</p></div>
-      <p>Most importantly, 6) When you find the <span class="staff">Staff</span>, some may try to dissuade you of your task through all manner of pathos, ethos or logos. Believe me that it is better for you and all the realm that the <span class="staff">Staff</span> comes to my possession.</p>
-      <p>I&rsquo;m sure this is piquing more than one intrigue in your adventuring heart. But I will not elaborate on the <span class="staff">Staff</span>, or my want of it. I cannot stress this enough: The less you know, the better for all of us.</p>
-      <p>Pry no further, and this is a simple job that will reward you handsomely. If you successfully find the <span class="staff">Staff</span> and bring it into your possession, return it to this shop and Zook will see to your reward. You may reap the reward of the others if they decide not to see the task through.</p>
-      <p>Though it&rsquo;s a busy place with all manner of creature, a varied party such as yourselves will undoubtedly draw attention. Especially from those who have the <span class="staff">Staff</span> or are seeking it. Whether you somehow make advantage of your conspicuousness, carry a clean cover story, or operate in stealth, I leave to you.</p>
-      <p>But to that end, I give you these as additional aid on your journey:</p>
-      <div class="items"><p>1) A scroll of <em>Seeming</em></p><p>2) A unique litter of sending stones. These are sensitive to each other; you may use a stone to broadcast to the others in its group, or to communicate individually. There are no limits to the messages sent. Be wary: using these in an overt way will naturally draw attention to yourselves. To collect your reward, you must return your sending stone to Zook as well.</p><p>3) Maps of the Fork and Ferry, as best I could make them.</p></div>
-      <p>The difficulty of this task will be inversely proportional to your preparation prior and to your cleverness the night of. Keep your focus.</p>
-      <p>That&rsquo;s all. I will abide no questions. Again, the less you know the better. For me, for you, for the realm. Good luck.&rdquo;</p>
+  <div class="narrow">
+    <div class="prose">
+
+      <h3>The listing</h3>
+      <p class="listing">&ldquo;Wanted: lost item. <span class="gold">2000g</span> each for retrieval. <span class="gold">500g</span> each up front. Zook&rsquo;s at the quarter moon. Ask for nothing.&rdquo;</p>
+      <p>The job listing, however you found it or it made its way to you, has a sort of magical quality about it.</p>
+
+      <h3>Zook&rsquo;s</h3>
+      <p>You head to Zook&rsquo;s on the night of the quarter moon. It&rsquo;s a shop known for its wide selection of gear for adventurers but also for its absurd prices. You ask Zook, the gnomish shopkeeper, for nothing. He sizes you up, then silently hops down from his stool and reveals a secret panel behind a pile of rope. He opens it to a small staircase, and gestures you in. You make your way down an ever-descending staircase to a clammy, quiet meeting room lit by dimly burning sconces. It&rsquo;s got a medium, wooden circular table in the middle surrounded by 7 chairs. On the edges of the room are a few chests of varying age. Some seem newer, and some are rotted through.</p>
+      <p>You may be the first one, or some of the other adventurers may be there already. You might even make small talk. Maybe you know a few of them. Maybe some of you came together.</p>
+
+      <h3>The figure</h3>
+      <p>In any event, when there&rsquo;s a quorum, a figure appears suddenly in the room. You&rsquo;re not sure if it came quietly from the stairs or was spirited there by magic. Perhaps it was waiting there invisibly.</p>
+      <p>You can see none of the figure&rsquo;s body or features. It wears long, oversized brown robes. Its face is shrouded by a combination of shadow and a kaleidoscopic, illusory magic. Its hands are sheathed in worn, gray leather gloves. It regards you all. Its voice is ethereal, androgynous, and without echo.</p>
+
+      <h3>The job</h3>
+      <div class="speech">
+        <p>&ldquo;Hail, adventurers. Welcome. Heed me, as I will say only what needs saying and I will say it only once.</p>
+        <p>You have come here because you found my job posting. I know you are strong and capable, as the postings were enchanted to only reveal themselves to such creatures.</p>
+        <p>The task I have for you is simple: Retrieve a <span class="staff">Staff</span>. I have learned that the <span class="staff">Staff</span> will likely be at the Fork and Ferry two nights from now. I will give you <span class="gold">500g</span> up front, which you can use to outfit yourselves at the shop overhead, or to whatever end you desire. I have seen to it that Zook will offer you fair prices.</p>
+        <p>Unfortunately I cannot offer you much information beyond that. I do not know who will have the <span class="staff">Staff</span>, when they might arrive, or when they might leave. I only know that it will almost certainly be at the Fork and Ferry, two nights from now.</p>
+      </div>
+
+      <h3>What you should know</h3>
+      <div class="speech">
+        <p>A few things you should know:</p>
+        <div class="items"><p>1) The <span class="staff">Staff</span> itself is plain, like that of a shepherd. Wooden, with a wide round hook at the head. It may be adorned, so as to disguise it.</p><p>2) You will know the <span class="staff">Staff</span> once you find it. Its aura is unique - if you hold it and know how to probe it arcanely, you will sense it clearly.</p><p>3) I suspect the presence of the <span class="staff">Staff</span> will not be made obvious. It will require some cunning to suss it out.</p><p>4) It&rsquo;s likely that you will not be the only ones looking for it. Be wary of others looking as well - they may even be in groups, like you. They will not make their purpose obvious, and neither should you.</p><p>5) You likely know that the Fork and Ferry is remote. It&rsquo;s a favored place of resting and recreation for all manner of adventurers. Do not underestimate those you meet.</p></div>
+        <p>Most importantly, 6) When you find the <span class="staff">Staff</span>, some may try to dissuade you of your task through all manner of pathos, ethos or logos. Believe me that it is better for you and all the realm that the <span class="staff">Staff</span> comes to my possession.</p>
+      </div>
+
+      <h3>The reward</h3>
+      <div class="speech">
+        <p>I&rsquo;m sure this is piquing more than one intrigue in your adventuring heart. But I will not elaborate on the <span class="staff">Staff</span>, or my want of it. I cannot stress this enough: The less you know, the better for all of us.</p>
+        <p>Pry no further, and this is a simple job that will reward you handsomely. If you successfully find the <span class="staff">Staff</span> and bring it into your possession, return it to this shop and Zook will see to your reward. You may reap the reward of the others if they decide not to see the task through.</p>
+      </div>
+
+      <h3>Your aid</h3>
+      <div class="speech">
+        <p>Though it&rsquo;s a busy place with all manner of creature, a varied party such as yourselves will undoubtedly draw attention. Especially from those who have the <span class="staff">Staff</span> or are seeking it. Whether you somehow make advantage of your conspicuousness, carry a clean cover story, or operate in stealth, I leave to you.</p>
+        <p>But to that end, I give you these as additional aid on your journey:</p>
+        <div class="items"><p>1) A scroll of <em>Seeming</em><span class="tip" tabindex="0" role="note" aria-label="Rules text for Seeming">?<span class="tipbox"><b>Seeming</b> &middot; Level 5 Illusion &middot; Casting time: Action &middot; Range: 30 feet &middot; Duration: 8 hours<br><br>You give an illusory appearance to each creature of your choice that you can see within range. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell. You can give the same appearance or different ones to the targets. The spell can change the appearance of the targets&rsquo; bodies and equipment. You can make each creature seem 1 foot shorter or taller and appear heavier or lighter. A target&rsquo;s new appearance must have the same basic arrangement of limbs as the target, but the extent of the illusion is otherwise up to you. The spell lasts for the duration. The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature&rsquo;s outfit, objects pass through the hat. A creature that takes the Study action to examine a target can make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.</span></span></p><p>2) A unique litter of sending stones<span class="tip" tabindex="0" role="note" aria-label="Rules text for Sending">?<span class="tipbox"><b>Sending</b> &middot; Level 3 spell &middot; Range: Unlimited &middot; Duration: Instantaneous<br><br>You send a short message of 25 words or fewer to a creature you have met or a creature described to you by someone who has met it. The target hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables targets to understand the meaning of your message. You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn&rsquo;t arrive. You know if the delivery fails. Upon receiving your message, a creature can block your ability to reach it again with this spell for 8 hours. If you try to send another message during that time, you learn that you are blocked, and the spell fails.<br><br><i>These stones work like the spell. The employer&rsquo;s litter has no limit to the messages sent.</i></span></span>. These are sensitive to each other; you may use a stone to broadcast to the others in its group, or to communicate individually. There are no limits to the messages sent. Be wary: using these in an overt way will naturally draw attention to yourselves. To collect your reward, you must return your sending stone to Zook as well.</p><p>3) Maps of the Fork and Ferry, as best I could make them.</p></div>
+      </div>
+
+      <h3>Good luck</h3>
+      <div class="speech">
+        <p>The difficulty of this task will be inversely proportional to your preparation prior and to your cleverness the night of. Keep your focus.</p>
+        <p>That&rsquo;s all. I will abide no questions. Again, the less you know the better. For me, for you, for the realm. Good luck.&rdquo;</p>
+      </div>
+      <p>The employer reaches into the folds of its sleeves and tosses 5 bags onto the table that clang with the sound of coin as they land. You collect your bag from the table and when you look back up the employer is gone.</p>
     </div>
-    <p>The employer reaches into the folds of its sleeves and tosses 5 bags onto the table that clink and clang with the sound of coin as they land. You collect your bag from the table and when you look back up the employer is gone.</p>
   </div>
 </section>
 
