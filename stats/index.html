@@ -42,12 +42,22 @@ body[data-v="play"] #v-stats,body[data-v="fight"] #v-stats{display:none}
 .bar{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:1rem 0}
 .mini{font:13px/1 -apple-system,system-ui,sans-serif;border:1px solid var(--line);background:var(--card);border-radius:6px;padding:.4rem .6rem;cursor:pointer;color:var(--ink)}
 .hint{font-size:12px;color:var(--mut)}
-#board{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem}
-.col{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.5rem}
-.colh{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:.4rem}
-.pc{display:flex;align-items:center;gap:.3rem;border-top:1px solid var(--line);padding:.35rem 0;font-size:14px}
-.pc .pn{flex:1}.pc button{border:none;background:none;color:var(--mut);cursor:pointer;font-size:15px;padding:.1rem .25rem}
-.pc button:hover{color:var(--acc)}
+body[data-v="play"] main{max-width:1240px}
+#board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.6rem;align-items:start}
+@media (max-width:1000px){#board{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){#board{grid-template-columns:1fr}}
+.col{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.55rem .6rem}
+.colh{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:.35rem}
+.pc{border-top:1px solid var(--line);padding:.5rem 0 .45rem}
+.pc:first-of-type{border-top:none}
+.pn{font-size:14.5px;line-height:1.25}
+.pmeta{font-size:11px;letter-spacing:.04em;color:var(--mut);margin-top:.1rem}
+.pbtns{display:flex;gap:.25rem;margin-top:.35rem;align-items:center}
+.pbtns button{border:1px solid var(--line);background:var(--bg);color:var(--mut);cursor:pointer;
+ font:12px/1 -apple-system,system-ui,sans-serif;border-radius:5px;padding:.3rem .42rem;min-width:1.9rem}
+.pbtns button:hover{border-color:var(--acc);color:var(--acc)}
+.pbtns .tf{flex:1;min-width:auto}
+.pbtns .rm{margin-left:auto;font-size:14px;line-height:.8}
 .fr{display:flex;align-items:center;gap:.4rem;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.4rem .5rem;margin:.3rem 0;font-size:14px}
 .fr.turn{border-color:var(--acc);border-left:4px solid var(--acc)}
 .fr input{font:inherit;font-size:14px;padding:.2rem .3rem;border:1px solid var(--line);border-radius:4px;background:var(--bg);width:3.2rem;text-align:center}
@@ -90,11 +100,11 @@ function draw(){
  AREAS.forEach(a=>{const list=play.filter(p=>p.area===a);
   const d=document.createElement('div');d.className='col';
   d.innerHTML='<div class="colh">'+a+' <span style="opacity:.6">'+list.length+'</span></div>'+
-   list.map(p=>'<div class="pc"><span class="pn">'+p.name+'<br><span class="lbl">'+p.sp+'</span></span>'+
-   '<button data-a="l" data-i="'+p.id+'" title="Move left">&#8592;</button>'+
-   '<button data-a="r" data-i="'+p.id+'" title="Move right">&#8594;</button>'+
-   '<button data-a="f" data-i="'+p.id+'" title="To combat">&#9876;</button>'+
-   '<button data-a="x" data-i="'+p.id+'" title="Remove">&times;</button></div>').join('');
+   list.map(p=>'<div class="pc"><div class="pn">'+p.name+'</div><div class="pmeta">'+p.sp+'</div>'+
+   '<div class="pbtns"><button data-a="l" data-i="'+p.id+'" title="Move a floor down the list">&#8592;</button>'+
+   '<button data-a="r" data-i="'+p.id+'" title="Move a floor up the list">&#8594;</button>'+
+   '<button data-a="f" data-i="'+p.id+'" class="tf">fight</button>'+
+   '<button data-a="x" data-i="'+p.id+'" class="rm" title="Remove">&times;</button></div></div>').join('');
   b.appendChild(d);});
  const f=document.getElementById('fight');
  const ord=[...fight].sort((x,y)=>(y.init||0)-(x.init||0));
